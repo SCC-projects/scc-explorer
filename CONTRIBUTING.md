@@ -3,14 +3,6 @@
 Thank you for helping. Bug reports, fixes, documentation and new features are
 all welcome.
 
-## The one rule
-
-**Never commit research data from the SCC project.** That includes records
-from the bibliography, the timeline, archival references and transcriptions,
-in whole or in part, also as test fixtures or in screenshots. This repository
-ships synthetic data only. If you need a record shape that the generator
-does not produce, extend `tools/generate_dummy_data.py`.
-
 ## Reporting a bug
 
 Open an issue with the bug template. The most useful reports say which
@@ -59,12 +51,6 @@ python -m http.server 8000
 - Comments explain *why*; the code shows *what*.
 - Indent with two spaces in JavaScript, HTML and CSS, four in Python
   (see `.editorconfig`).
-
-## Licensing of contributions
-
-By contributing you agree that your code is released under the
-[MIT licence](LICENSE) and your documentation under
-[CC BY 4.0](docs/LICENSE), as the rest of the repository.
 
 ## Code of conduct
 
