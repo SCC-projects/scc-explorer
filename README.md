@@ -24,11 +24,12 @@ The real web-site with actual data of the [SCC Explorer](https:///scc.lhlt.mpg.d
 
 ## The applications
 
+
 | | |
 |---|---|
-| **[Search References](references/search.html)** | A bibliographic catalogue. General search across every field, a period slider, per-field selects (author, title, year, publisher, place, language) and a hierarchical keyword tree. Results export to BibTeX — the whole result or hand-picked rows. |
-| **[Build Graphs](references/graph.html)** | The same catalogue as charts: bubble, bar and pie on any pair of columns, filtered by the same keyword tree and period. Drag a rectangle across a bubble or bar chart to list the records it covers; export the chart as PNG and the selection as CSV, Excel or BibTeX. |
-| **[Timeline](timeline/index.html)** | Points, ranges and background periods on a zoomable timeline, grouped in rows. Dates before October 1582 can be read in the Julian or the Gregorian calendar; a papal calendar labels the axis with regnal years; Easter Sunday can be drawn for every year. Names inside a card link to the matching entity, and every selection has a shareable URL. |
+| **[Search References](https://scc-projects.github.io/scc-explorer/references/search.html)** | A bibliographic catalogue. General search across every field, a period slider, per-field selects (author, title, year, publisher, place, language) and a hierarchical keyword tree. Results export to BibTeX — the whole result or hand-picked rows. |
+| **[Build Graphs](https://scc-projects.github.io/scc-explorer/references/graph.html)** | The same catalogue as charts: bubble, bar and pie on any pair of columns, filtered by the same keyword tree and period. Drag a rectangle across a bubble or bar chart to list the records it covers; export the chart as PNG and the selection as CSV, Excel or BibTeX. |
+| **[Timeline](https://scc-projects.github.io/scc-explorer/timeline/index.html)** | Points, ranges and background periods on a zoomable timeline, grouped in rows. Dates before October 1582 can be read in the Julian or the Gregorian calendar; a papal calendar labels the axis with regnal years; Easter Sunday can be drawn for every year. Names inside a card link to the matching entity, and every selection has a shareable URL. |
 
 ![Search References](docs/img/search.png)
 ![Build Graphs](docs/img/graph.png)
