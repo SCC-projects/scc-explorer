@@ -139,7 +139,7 @@ calendar layers. See [CHANGELOG.md](CHANGELOG.md).
 
 If you use this software, please cite it as described in
 [CITATION.cff](CITATION.cff) (GitHub shows a “Cite this repository” button).
-To cite the research content of the platform, follow the citation guidance
+To cite the research content of the [platform](https://scc.lhlt.mpg.de/), follow the citation guidance
 published on the platform.
 
 ## Licence
