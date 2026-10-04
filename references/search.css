@@ -1,0 +1,190 @@
+/* Search References. Everything is scoped under #scc-search, so the app can
+   be embedded in a page that has its own Bootstrap or site stylesheet
+   (.panel-body, .container, .table, h3 …) without either side leaking. */
+
+#scc-search {
+  background: #f8f5f0;
+  padding: 16px;
+  border-radius: 6px;
+  color: #333;
+  font-size: 14px;
+  line-height: 1.4;
+}
+#scc-search *,
+#scc-search *::before,
+#scc-search *::after { box-sizing: border-box; }
+#scc-search [hidden] { display: none !important; }
+#scc-search h3 { margin: 0 0 12px; font-size: 20px; font-weight: 500; }
+
+/* layout */
+#scc-search .app-wrap { display: flex; gap: 20px; align-items: flex-start; }
+#scc-search .sidebar {
+  flex: 0 0 22%;
+  max-width: 22%;
+  min-width: 240px;
+  background: #f8f5f0;
+  border: 1px solid #dfd7ca;
+  border-radius: 6px;
+  padding: 14px;
+}
+#scc-search .mainpanel { flex: 1 1 auto; min-width: 0; }
+#scc-search .result-line { margin: 0 0 10px; font-size: 13px; color: #6b705c; }
+@media (max-width: 900px) {
+  #scc-search .app-wrap { flex-direction: column; }
+  #scc-search .sidebar { max-width: 100%; width: 100%; }
+}
+
+/* collapsible section buttons */
+#scc-search .btn-section {
+  display: flex; justify-content: space-between; align-items: center;
+  width: 100%;
+  margin-bottom: 6px;
+  padding: 8px 12px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: #fff;
+  font: inherit;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+}
+#scc-search .btn-section:hover { filter: brightness(1.08); }
+#scc-search .btn-section .chev { font-size: 11px; transition: transform .2s; }
+#scc-search .btn-section.collapsed .chev { transform: rotate(-90deg); }
+
+#scc-search .bg-basic    { background-color: #583532; }
+#scc-search .bg-advanced { background-color: #294547; }
+#scc-search .bg-period   { background-color: #325558; }
+#scc-search .bg-cats     { background-color: #3b6568; }
+#scc-search .bg-keywords { background-color: #447578; }
+
+#scc-search .panel-body {
+  margin: -6px 0 8px;
+  padding: 10px 12px;
+  background: #fff;
+  border: 1px solid #dfd7ca;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+}
+#scc-search .panel-body.nested { background: #fbfaf7; }
+
+/* keyword checkboxes */
+#scc-search .checkgroup { display: flex; flex-direction: column; gap: 3px; margin: 6px 0; }
+#scc-search .checkgroup.indent-1 { margin-left: 14px; }
+#scc-search .checkgroup.indent-2 { margin-left: 28px; }
+#scc-search .checkgroup label {
+  display: flex; align-items: flex-start; gap: 6px;
+  margin: 0;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.35;
+  cursor: pointer;
+}
+#scc-search .checkgroup input { margin-top: 3px; flex-shrink: 0; }
+#scc-search hr.thin { margin: 8px 0; border: 0; border-top: 1px dashed #dfd7ca; }
+
+#scc-search .select-all-btn {
+  margin-bottom: 6px;
+  padding: 3px 10px;
+  background: #f0eae0;
+  border: 1px solid #ccc4b7;
+  border-radius: 3px;
+  font-size: 12px;
+  cursor: pointer;
+}
+#scc-search .select-all-btn:hover { background: #e6ddce; }
+
+/* inputs */
+#scc-search .global-search {
+  width: 100%;
+  padding: 6px 10px;
+  border: 1px solid #ccc4b7;
+  border-radius: 3px;
+  font-size: 14px;
+}
+#scc-search .slider-wrap { padding: 18px 8px 8px; }
+#scc-search .noUi-connect { background: #447578; }
+#scc-search .noUi-handle { background: #325558; border-color: #294547; box-shadow: none; }
+#scc-search .year-vals {
+  display: flex; justify-content: space-between;
+  margin-top: 8px;
+  color: #325558; font-size: 13px; font-weight: 600;
+}
+#scc-search .filter-label {
+  display: block;
+  margin: 6px 0 2px;
+  font-size: 13px; font-weight: 600;
+}
+#scc-search .select2-container { width: 100% !important; margin-bottom: 6px; }
+
+/* table */
+#scc-search table.dataTable { font-size: 13px; table-layout: fixed; margin: 0 !important; }
+#scc-search table.dataTable td { vertical-align: top; overflow-wrap: anywhere; }
+/* DataTables 1.13 paints selection with an inset box-shadow, not a background */
+#scc-search table.dataTable tbody tr.selected > * {
+  box-shadow: inset 0 0 0 9999px #d7e9ea !important;
+  color: inherit !important;
+}
+#scc-search table.dataTable tbody tr { cursor: pointer; }
+
+#scc-search .dt-clamp {
+  position: relative;
+  max-height: 7em;
+  overflow: hidden;
+  line-height: 1.4;
+  cursor: pointer;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  line-clamp: 5;
+  -webkit-box-orient: vertical;
+}
+#scc-search .dt-clamp.expanded { max-height: none; display: block; -webkit-line-clamp: unset; line-clamp: unset; }
+
+#scc-search .dt-top { margin-bottom: 8px; }
+#scc-search .dt-row {
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 10px;
+}
+#scc-search .dt-meta { margin-bottom: 6px; font-size: 13px; }
+#scc-search .dt-bottom { margin-top: 10px; }
+
+#scc-search .dt-buttons .dt-button {
+  margin: 3px 3px 3px 0;
+  padding: 5px 12px;
+  border: none !important;
+  border-radius: 3px;
+  color: #fff !important;
+  font-size: 13px;
+}
+#scc-search .dt-button.buttons-colvis    { background: #ccb072 !important; }
+#scc-search .dt-button.buttons-copy      { background: #c47841 !important; }
+#scc-search .dt-button.buttons-print     { background: #6e5622 !important; }
+#scc-search .dt-button.buttons-bibexport { background: #4d0000 !important; }
+
+/* BibTeX modal */
+#scc-search .modal-back {
+  position: fixed; inset: 0; z-index: 3000;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(0, 0, 0, .4);
+}
+#scc-search .modal-box {
+  position: relative;
+  max-width: 480px;
+  padding: 24px;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, .3);
+}
+#scc-search .modal-box h4 { margin: 0 0 8px; font-size: 18px; }
+#scc-search .modal-box .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+#scc-search .close-x {
+  position: absolute; top: 8px; right: 12px;
+  background: none; border: none; font-size: 22px; cursor: pointer;
+}
+#scc-search .dl-btn,
+#scc-search .cancel-btn {
+  padding: 8px 14px; border: none; border-radius: 3px; color: #fff; cursor: pointer;
+}
+#scc-search .dl-btn { background: #4d0000; }
+#scc-search .dl-btn:hover { background: #690000; }
+#scc-search .cancel-btn { background: #999; }

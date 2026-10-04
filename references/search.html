@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Search References · SCC Explorer demo</title>
+
+<link rel="stylesheet" href="../assets/demo.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/datatables.net-dt@1.13.8/css/jquery.dataTables.min.css" integrity="sha384-tFA8ahuAUqwxpBviiAFdAJR7TTBoWYBDU8+gmiLX0sRQRDDcRk6jiP1lWss11gn/" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/datatables.net-buttons-dt@2.4.2/css/buttons.dataTables.min.css" integrity="sha384-K26MhCX697meit1Nu1dHNOfNJxi/z+7T1c+ttxLhY1VZ6FSyMuvaWcy1cLt6spw7" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" integrity="sha384-OXVF05DQEe311p6ohU11NwlnX08FzMCsyoXzGOaL+83dKAb3qS17yZJxESl8YrJQ" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nouislider@15.7.1/dist/nouislider.min.css" integrity="sha384-PSZaVsyG9jDu8hFaSJev5s/9poIJlX7cuxSGdqCgXRHpo2DzIaZAyCd2rG/DJJmV" crossorigin="anonymous">
+<link rel="stylesheet" href="search.css">
+</head>
+
+<body>
+<header class="demo-bar" style="--accent: var(--references)">
+  <a class="demo-brand" href="../index.html">SCC Explorer <span>demo</span></a>
+  <nav class="demo-nav">
+    <a href="search.html" aria-current="page">Search References</a>
+    <a href="graph.html">Build Graphs</a>
+    <a href="../timeline/index.html">Timeline</a>
+  </nav>
+</header>
+<div class="demo-notice"><strong>Demo build</strong>All records are synthetic.</div>
+
+<main class="demo-main">
+<div id="scc-search">
+  <div class="app-wrap">
+
+    <aside class="sidebar">
+      <h3>Search References</h3>
+
+      <button type="button" class="btn-section bg-basic" data-toggle-panel="panelBasic">
+        <span>General search</span><span class="chev">▼</span>
+      </button>
+      <div class="panel-body" id="panelBasic">
+        <input type="search" class="global-search" id="globalSearch"
+               placeholder="Anything in the catalogue" aria-label="General search">
+      </div>
+
+      <button type="button" class="btn-section bg-advanced" data-toggle-panel="panelAdv">
+        <span>Advanced search</span><span class="chev">▼</span>
+      </button>
+      <div class="panel-body" id="panelAdv">
+
+        <button type="button" class="btn-section bg-period collapsed" data-toggle-panel="panelPeriod">
+          <span>Period of time</span><span class="chev">▼</span>
+        </button>
+        <div class="panel-body nested" id="panelPeriod" style="display:none">
+          <div class="slider-wrap">
+            <div id="yearSlider"></div>
+            <div class="year-vals"><span id="yearLo"></span><span id="yearHi"></span></div>
+          </div>
+        </div>
+
+        <button type="button" class="btn-section bg-cats collapsed" data-toggle-panel="panelCats">
+          <span>Categories</span><span class="chev">▼</span>
+        </button>
+        <div class="panel-body nested" id="panelCats" style="display:none">
+          <label class="filter-label" for="cat_AUTHOR">Author</label>
+          <select id="cat_AUTHOR" multiple></select>
+          <label class="filter-label" for="cat_TITLE">Title</label>
+          <select id="cat_TITLE" multiple></select>
+          <label class="filter-label" for="cat_YEAR">Year</label>
+          <select id="cat_YEAR" multiple></select>
+          <label class="filter-label" for="cat_PUBLISHER">Publisher</label>
+          <select id="cat_PUBLISHER" multiple></select>
+          <label class="filter-label" for="cat_PLACE">Place</label>
+          <select id="cat_PLACE" multiple></select>
+          <label class="filter-label" for="cat_LANGUAGE">Language</label>
+          <select id="cat_LANGUAGE" multiple></select>
+        </div>
+
+        <button type="button" class="btn-section bg-keywords collapsed" data-toggle-panel="keywordPanels">
+          <span>Keywords</span><span class="chev">▼</span>
+        </button>
+        <div class="panel-body nested" id="keywordPanels" style="display:none"></div>
+      </div>
+    </aside>
+
+    <section class="mainpanel">
+      <p class="result-line"><span id="resultCount">0</span> records match the filters.
+        Click a row to select it for export; click a long cell to expand it.</p>
+      <table id="refTable" class="display" style="width:100%"></table>
+    </section>
+
+  </div>
+</div>
+</main>
+
+<footer class="demo-footer">
+  SCC Explorer — open-source demo build with synthetic data.
+  <a href="../docs/references-explorer.md">Documentation</a>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js" integrity="sha384-1H217gwSVyLSIfaLxHbE7dRb3v4mYCKbpQvzx0cegeju1MVsGrX5xXxAvs/HgeFs" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/datatables.net@1.13.8/js/jquery.dataTables.min.js" integrity="sha384-EA0TH5FL18lz8e2FL4CeUXiVOMJ3ppD6fZo3QkEgERDV68Qa6ok9LFz0xQe2NLNv" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/datatables.net-buttons@2.4.2/js/dataTables.buttons.min.js" integrity="sha384-57StXIwAbLcC8X3+3CfIRofQ1D7rMggjdwLqpqUhBcl7m8JdVqKH6/9F0Sn9B2j5" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/datatables.net-buttons@2.4.2/js/buttons.colVis.min.js" integrity="sha384-dyI79OT6UE9qWK4x3HAQSilUPj6TfmkE8pX6KeBTyrhOaNrk7cbvUZUDMuC8S7/k" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/datatables.net-buttons@2.4.2/js/buttons.html5.min.js" integrity="sha384-CZe/qsxzVISKa8QreSVVnU6pxOMTg4t5AZ2iC74eHDK5ZysL2QrZS3ldIM7D4TkX" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/datatables.net-buttons@2.4.2/js/buttons.print.min.js" integrity="sha384-f5wX6gS38xMVGrwiXWKR7VijcBONISoTGfHF3N7yTwGrmvHaMHB4lq+VKxeZID10" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js" integrity="sha384-d3UHjPdzJkZuk5H3qKYMLRyWLAQBJbby2yr2Q58hXXtAGF8RSNO9jpLDlKKPv5v3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/nouislider@15.7.1/dist/nouislider.min.js" integrity="sha384-/gBUOLHADjY2rp6bHB0IyW9AC28q4OsnirJScje4l1crgYW7Qarx3dH8zcqcUgmy" crossorigin="anonymous"></script>
+
+<script src="data/references.js"></script>
+<script src="keywords.js"></script>
+<script src="search.js"></script>
+</body>
+</html>

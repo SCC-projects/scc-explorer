@@ -1,0 +1,254 @@
+/* Build Graphs. Every selector is scoped under #scc-graph, so the app can be
+   embedded in a page with its own Bootstrap or site stylesheet without
+   either side leaking (.panel-body, .container, h3, .table …). */
+
+#scc-graph {
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  color: #3e3f3a;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 0 18px 30px;
+  box-sizing: border-box;
+}
+
+#scc-graph *,
+#scc-graph *::before,
+#scc-graph *::after { box-sizing: border-box; }
+
+/* ------------------------------------------------------------------ sidebar */
+
+#scc-graph .sidebar {
+  flex: 0 0 22%;
+  max-width: 22%;
+  background: #f8f5f0;
+  border: 1px solid #dfd7ca;
+  border-radius: 3px;
+  padding: 12px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+#scc-graph .sidebar h4 {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 14px 0 6px;
+  color: #3e3f3a;
+}
+
+#scc-graph .sidebar h4:first-child { margin-top: 0; }
+
+#scc-graph .hint {
+  font-size: 12px;
+  line-height: 1.45;
+  color: #6b705c;
+  margin: 4px 0;
+}
+
+#scc-graph select.form-ctl {
+  width: 100%;
+  padding: 5px 7px;
+  border: 1px solid #cfc7b8;
+  border-radius: 3px;
+  background: #fff;
+  font-size: 13px;
+  color: #3e3f3a;
+}
+
+#scc-graph hr {
+  border: 0;
+  border-top: 1px solid #e0dacd;
+  margin: 10px 0;
+}
+
+/* year slider */
+
+#scc-graph .slider-wrap { padding: 6px 8px 2px; }
+#scc-graph #yearSlider { height: 8px; margin: 14px 4px 6px; }
+#scc-graph .noUi-connect { background: #800020; }
+#scc-graph .noUi-handle {
+  width: 16px; height: 16px; right: -8px; top: -5px;
+  border-radius: 50%; border: 1px solid #800020;
+  box-shadow: none; cursor: pointer;
+}
+#scc-graph .noUi-handle::before,
+#scc-graph .noUi-handle::after { display: none; }
+#scc-graph .year-out {
+  text-align: center; font-weight: 600; color: #800020; padding-bottom: 4px;
+}
+
+/* keyword panels */
+
+#scc-graph .panel-head {
+  display: block;
+  width: 100%;
+  color: #fff;
+  border: 1px solid #393C38;
+  border-radius: 3px;
+  padding: 8px 10px;
+  margin: 4px 0 0;
+  font-size: 13px;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+  line-height: 1.3;
+}
+
+#scc-graph .panel-head::after { content: " ▸"; float: right; }
+#scc-graph .panel-head.open::after { content: " ▾"; }
+
+#scc-graph .panel-body-kw {
+  border: 1px solid #e0dacd;
+  border-top: 0;
+  padding: 8px 6px;
+  margin-bottom: 4px;
+  background: #fff;
+}
+
+#scc-graph .panel-kw.depth-1 { margin: 4px 0 4px 6px; }
+
+#scc-graph .btn-selectall {
+  border: 1px solid #cfc7b8;
+  background: #efeae1;
+  color: #3e3f3a;
+  border-radius: 3px;
+  padding: 3px 9px;
+  font-size: 12px;
+  margin-bottom: 6px;
+  cursor: pointer;
+}
+
+#scc-graph .btn-selectall:hover { background: #e4ddd1; }
+
+#scc-graph .cb-group { margin: 2px 0; }
+#scc-graph .cb-group.indent-1 { margin-left: 14px; }
+#scc-graph .cb-group.indent-2 { margin-left: 28px; }
+
+#scc-graph .cb {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  line-height: 1.35;
+  padding: 1px 0;
+}
+
+#scc-graph .cb input { margin: 3px 0 0; flex: 0 0 auto; }
+#scc-graph .cb label { font-weight: 400; margin: 0; cursor: pointer; }
+
+/* download section */
+
+#scc-graph .btn-dl {
+  display: inline-block;
+  border: 1px solid #393C38;
+  background: #606c38;
+  color: #fff;
+  border-radius: 3px;
+  padding: 6px 12px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+#scc-graph .btn-dl:hover { background: #4f5a2e; }
+
+/* -------------------------------------------------------------- main panel */
+
+#scc-graph .main {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+#scc-graph .axis-row {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 10px;
+}
+
+#scc-graph .axis-row > div { flex: 1 1 0; }
+
+#scc-graph .axis-row label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+#scc-graph .plot-box {
+  position: relative;
+  height: 600px;
+  border: 1px solid #dfd7ca;
+  border-radius: 3px;
+  background: #fff;
+  padding: 8px;
+}
+
+#scc-graph #plotui { cursor: crosshair; }
+
+#scc-graph .well-kw {
+  margin-top: 14px;
+  background: #f8f5f0;
+  border: 1px solid #dfd7ca;
+  border-radius: 3px;
+  padding: 12px;
+}
+
+#scc-graph .well-kw h4 {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0 0 8px;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+#scc-graph .btn-clear {
+  border: 1px solid #cfc7b8;
+  background: #efeae1;
+  border-radius: 3px;
+  padding: 2px 9px;
+  font-size: 12px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+#scc-graph table.dataTable { font-size: 12px; width: 100% !important; }
+#scc-graph table.dataTable td {
+  vertical-align: top;
+  max-height: 5.4em;
+  overflow: hidden;
+}
+#scc-graph .dataTables_wrapper { background: #fff; padding: 6px; border-radius: 3px; }
+
+/* ----------------------------------------------------------------- modal */
+
+#scc-graph [hidden] { display: none !important; }
+
+#scc-graph .modal-back {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, .45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+#scc-graph .modal-card {
+  background: #fff;
+  border-radius: 4px;
+  padding: 20px 24px;
+  min-width: 320px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, .3);
+}
+
+#scc-graph .modal-card h4 { margin: 0 0 14px; font-size: 17px; font-weight: 600; }
+#scc-graph .modal-card .btn-dl { margin: 0 6px 8px 0; }
+#scc-graph .modal-card .btn-clear { float: right; margin-top: 6px; }
+
+/* ------------------------------------------------------------ responsive */
+
+@media (max-width: 991px) {
+  #scc-graph { flex-direction: column; }
+  #scc-graph .sidebar { flex: 1 1 auto; max-width: 100%; width: 100%; max-height: none; }
+  #scc-graph .plot-box { height: 420px; }
+}

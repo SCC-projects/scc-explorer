@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SCC Explorer · open-source demo</title>
+<link rel="stylesheet" href="assets/demo.css">
+<style>
+  .intro { max-width: 760px; margin: 8px 0 28px; line-height: 1.55; color: #3e3f3a; }
+  .apps { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; max-width: 1100px; }
+  .app {
+    display: flex; flex-direction: column;
+    border: 1px solid #dfd7ca; border-radius: 6px; overflow: hidden;
+    background: #f8f5f0; color: inherit; text-decoration: none;
+  }
+  .app:hover { box-shadow: 0 3px 14px rgba(0,0,0,.12); }
+  .app-head { padding: 14px 18px; color: #fff; font-size: 18px; font-weight: 600; }
+  .app-body { padding: 14px 18px 18px; font-size: 14px; line-height: 1.5; }
+  .app-body ul { margin: 8px 0 0; padding-left: 18px; }
+  .links { margin-top: 30px; font-size: 14px; }
+  .links a { color: var(--platform); }
+</style>
+</head>
+
+<body>
+<header class="demo-bar">
+  <a class="demo-brand" href="index.html">SCC Explorer <span>demo</span></a>
+  <nav class="demo-nav">
+    <a href="references/search.html">Search References</a>
+    <a href="references/graph.html">Build Graphs</a>
+    <a href="timeline/index.html">Timeline</a>
+  </nav>
+</header>
+<div class="demo-notice"><strong>Demo build</strong>All data are synthetic.</div>
+
+<main class="demo-main">
+  <h1>SCC Explorer — applications</h1>
+  <p class="intro">
+    Static, server-free versions of the research applications of the
+    SCC Explorer platform on the history of the Congregation of the Council.
+    This build ships with <strong>synthetic data</strong> that exercises every
+    feature; the research datasets themselves are published on the platform.
+    Everything runs in the browser, from a web server or straight from disk.
+  </p>
+
+  <div class="apps">
+    <a class="app" href="references/search.html">
+      <div class="app-head" style="background: var(--references)">Search References</div>
+      <div class="app-body">
+        Bibliographic catalogue.
+        <ul>
+          <li>general and per-field search, period slider</li>
+          <li>hierarchical keyword tree</li>
+          <li>BibTeX export of results or selected rows</li>
+        </ul>
+      </div>
+    </a>
+    <a class="app" href="references/graph.html">
+      <div class="app-head" style="background: var(--references)">Build Graphs</div>
+      <div class="app-body">
+        The same catalogue as charts.
+        <ul>
+          <li>bubble, bar and pie charts on any two columns</li>
+          <li>drag a rectangle to list the records it covers</li>
+          <li>export as PNG, CSV, Excel or BibTeX</li>
+        </ul>
+      </div>
+    </a>
+    <a class="app" href="timeline/index.html">
+      <div class="app-head" style="background: var(--timeline)">Timeline</div>
+      <div class="app-body">
+        Points, ranges and background periods.
+        <ul>
+          <li>Julian / Gregorian dating across the 1582 reform</li>
+          <li>papal calendar and Easter dates</li>
+          <li>cross-links between cards, deep links</li>
+        </ul>
+      </div>
+    </a>
+  </div>
+
+  <p class="links">
+    <a href="https://github.com/SCC-projects/scc-explorer">Source on GitHub</a> ·
+    <a href="docs/README.md">Documentation</a>
+  </p>
+</main>
+
+<footer class="demo-footer">
+  Code under the MIT licence, documentation under CC BY 4.0.
+  Alexandra Anokhina, Benedetta Albani.
+</footer>
+</body>
+</html>

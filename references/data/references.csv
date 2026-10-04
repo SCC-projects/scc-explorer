@@ -1,0 +1,61 @@
+AUTHOR;YEAR;TITLE;JOURNAL;BOOKTITLE;EDITOR;PUBLISHER;PLACE;SERIES;VOLUME;NUMBER;PAGES;NOTES;LANGUAGE;TYPE;KEYWORDS;BIBTEXKEY;CATEGORY
+Author 01, A.;1588;Sample title 06: a dummy record for testing;;;Author 01, A.;Publisher 1;Place 6;;;;;;Language 4;Edited Book;Group 1, Term 1.1, Group 2, Term 2.2, Detail 2.a, Group 3, Section 3.A, Term 3.A.2, Term 3.A.3, Section 3.B, Term 3.B.1, Detail 3.B.a;DUMMY006;BOOK
+Author 01, A.;1978;Sample title 51: a dummy record for testing;Journal C;;;;;Series X;47;2;160-189;;Language 1;Journal Article;Group 1, Term 1.1, Group 2, Term 2.3, Detail 2.c, Group 3, Section 3.A, Term 3.A.1;DUMMY051;ARTICLE
+Author 01, A.;2004;Sample title 36: a dummy record for testing;;;;Publisher 3;Place 3;;;;;;Language 3;Source Edition;Group 1, Term 1.1, Group 2, Term 2.2;DUMMY036;BOOK
+Author 01, A.;2011;Sample title 55: a dummy record for testing;;;Author 01, A.;Publisher 5;Place 3;;;;;;Language 3;Edited Book;Group 1, Term 1.5;DUMMY055;BOOK
+Author 02, B.;1954;Sample title 26: a dummy record for testing;Journal E;;;;;;13;3;131-144;;Language 3;Journal Article;Group 1, Term 1.1, Group 3, Section 3.B, Term 3.B.2;DUMMY026;ARTICLE
+Author 02, B.;1985;Sample title 32: a dummy record for testing;;;;Publisher 3;Place 5;;;;;;Language 5;Book;Group 1, Term 1.2, Group 2, Term 2.1, Term 2.3, Detail 2.b, Group 3, Section 3.A, Term 3.A.2, Term 3.A.1, Section 3.B, Term 3.B.2, Detail 3.B.b;DUMMY032;BOOK
+Author 03, C.;1955;Sample title 54: a dummy record for testing;Journal C;;;;;Series Y;64;2;170-196;;Language 2;Journal Article;Group 1, Term 1.4, Group 2, Term 2.2, Detail 2.d, Group 3, Section 3.A, Term 3.A.1;DUMMY054;ARTICLE
+Author 03, C.;1966;Sample title 13: a dummy record for testing;Journal D;;;;;Series Y;72;4;282-317;;Language 1;Journal Article;Group 1, Term 1.3, Group 2, Term 2.2, Term 2.3, Group 3;DUMMY013;ARTICLE
+Author 04, D.;1936;Sample title 09: a dummy record for testing;;Sample volume 6;Author 05, E.;Publisher 3;Place 3;;;;75-100;;Language 3;Book Section;Group 1, Term 1.4, Group 3, Section 3.A, Term 3.A.2, Term 3.A.1, Section 3.B, Term 3.B.1;DUMMY009;INBOOK
+Author 04, D.;2009;Sample title 39: a dummy record for testing;Journal C;;;;;Series Z;78;3;116-133;;Language 2;Journal Article;Group 1, Term 1.4;DUMMY039;ARTICLE
+Author 04, D.;2018;Sample title 30: a dummy record for testing;;;;Publisher 5;Place 6;;;;;;Language 1;Book;Group 1, Term 1.5;DUMMY030;BOOK
+Author 06, F.;1656;Sample title 05: a dummy record for testing;;Sample volume 3;Author 23, W.;Publisher 1;Place 7;Series Z;;;345-383;;Language 4;Book Section;Group 1, Term 1.5, Group 2, Term 2.1, Term 2.2, Detail 2.b, Detail 2.c, Group 3, Section 3.B, Term 3.B.2, Detail 3.B.b;DUMMY005;INBOOK
+Author 06, F.;1824;Sample title 12: a dummy record for testing;;Sample volume 9;Author 26, Z.;Publisher 2;Place 4;;;;257-281;;Language 5;Book Section;Group 1, Term 1.2, Group 2, Term 2.1, Detail 2.c, Detail 2.a, Group 3;DUMMY012;INBOOK
+Author 06, F.;1855;Sample title 08: a dummy record for testing;;;;Publisher 4;Place 7;;;;;;Language 3;Source Edition;Group 1, Term 1.3, Group 2, Term 2.2, Term 2.1, Detail 2.b, Detail 2.d;DUMMY008;BOOK
+Author 07, G.;1751;Sample title 04: a dummy record for testing;;;;Publisher 1;Place 5;Series X;;;;;Language 1;Book;Group 1, Term 1.4, Group 2, Term 2.3, Detail 2.d, Group 3, Section 3.A, Term 3.A.3, Term 3.A.1;DUMMY004;BOOK
+Author 07, G.;1979;Sample title 53: a dummy record for testing;Journal A;;;;;;69;3;384-399;;Language 3;Journal Article;Group 1, Term 1.3;DUMMY053;ARTICLE
+Author 08, H.;1990;Sample title 27: a dummy record for testing;;;;Publisher 3;Place 6;;;;;;Language 2;Thesis;Group 1, Term 1.2, Group 2, Term 2.1, Detail 2.d, Detail 2.a, Group 3, Section 3.A, Term 3.A.1, Term 3.A.3;DUMMY027;PHDTHESIS
+Author 09, I.;1957;Sample title 31: a dummy record for testing;Journal C;;;;;;72;1;144-171;;Language 2;Journal Article;Group 1, Term 1.1, Group 2, Term 2.3, Detail 2.d, Detail 2.a;DUMMY031;ARTICLE
+Author 10, J.;1817;Sample title 07: a dummy record for testing;Journal C;;;;;;56;4;115-140;;Language 1;Journal Article;Group 1, Term 1.2, Group 3, Section 3.A, Term 3.A.1, Term 3.A.2, Section 3.B, Term 3.B.2, Detail 3.B.b;DUMMY007;ARTICLE
+Author 11, K.;1964;Sample title 57: a dummy record for testing;;;Author 11, K.;Publisher 6;Place 2;;;;;;Language 3;Edited Book;Group 1, Term 1.2, Group 3, Section 3.A, Term 3.A.3, Term 3.A.1;DUMMY057;BOOK
+Author 11, K.;1990;Sample title 19: a dummy record for testing;;;;Publisher 4;Place 3;;;;;;Language 4;Book;Group 1, Term 1.4, Group 2, Term 2.1;DUMMY019;BOOK
+Author 11, K.;2008;Sample title 23: a dummy record for testing;Journal D;;;;;;71;2;224-251;;Language 2;Journal Article;Group 1, Term 1.3, Group 3, Section 3.B, Term 3.B.2;DUMMY023;ARTICLE
+Author 12, L.;1954;Sample title 14: a dummy record for testing;Journal D;;;;;;67;1;81-120;;Language 5;Journal Article;Group 1, Term 1.4, Group 2, Term 2.2;DUMMY014;ARTICLE
+Author 12, L.;1954;Sample title 58: a dummy record for testing;;Sample volume 3;Author 06, F.;Publisher 5;Place 3;Series Y;;;365-381;;Language 3;Book Section;Group 1, Term 1.3, Group 2, Term 2.2, Term 2.3;DUMMY058;INBOOK
+Author 12, L.;1962;Sample title 21: a dummy record for testing;;;;Publisher 2;Place 6;;;;;;Language 5;Book;Group 1, Term 1.1, Group 3, Section 3.B, Term 3.B.2, Detail 3.B.b;DUMMY021;BOOK
+Author 12, L.;2017;Sample title 33: a dummy record for testing;;;;Publisher 2;Place 6;;;;;;Language 3;Source Edition;Group 1, Term 1.3, Group 2, Term 2.3, Term 2.1, Detail 2.a, Group 3, Section 3.A, Term 3.A.3, Section 3.B, Term 3.B.1, Detail 3.B.a;DUMMY033;BOOK
+Author 13, M.;1859;Sample title 10: a dummy record for testing;;;;Publisher 5;Place 6;;;;;;Language 2;Book;Group 1, Term 1.5;DUMMY010;BOOK
+Author 13, M.;1953;Sample title 18: a dummy record for testing;;;;Publisher 6;Place 4;Series Y;;;;;Language 2;Source Edition;Group 1, Term 1.3, Group 2, Term 2.1;DUMMY018;BOOK
+Author 13, M.;1984;Sample title 42: a dummy record for testing;;Sample volume 2;Author 02, B.;Publisher 3;Place 8;;;;373-388;;Language 1;Book Section;Group 1, Term 1.2, Group 2, Term 2.2, Term 2.1, Detail 2.a, Detail 2.c, Group 3, Section 3.A, Term 3.A.3, Term 3.A.2;DUMMY042;INBOOK
+Author 13, M.;1999;Sample title 40: a dummy record for testing;;;;Publisher 2;Place 2;;;;;;Language 1;Book;Group 1, Term 1.5, Group 3, Section 3.A, Term 3.A.1;DUMMY040;BOOK
+Author 14, N.;1952;Sample title 43: a dummy record for testing;;;;Publisher 1;Place 7;;;;;;Language 2;Book;Group 1, Term 1.3, Group 2, Term 2.3, Detail 2.b, Group 3, Section 3.A, Term 3.A.2, Term 3.A.3, Section 3.B, Term 3.B.1;DUMMY043;BOOK
+Author 14, N.;1970;Sample title 25: a dummy record for testing;Journal E;;;;;Series Y;38;3;45-76;;Language 5;Journal Article;Group 1, Term 1.5, Group 2, Term 2.1, Detail 2.a, Detail 2.b, Group 3, Section 3.A, Term 3.A.1, Term 3.A.3;DUMMY025;ARTICLE
+Author 14, N.;1978;Sample title 17: a dummy record for testing;Journal E;;;;;Series Z;6;4;203-230;;Language 1;Journal Article;Group 1, Term 1.2, Group 3, Section 3.A, Term 3.A.1;DUMMY017;ARTICLE
+Author 14, N.;1988;Sample title 15: a dummy record for testing;;Sample volume 5;Author 24, X.;Publisher 4;Place 1;;;;326-348;;Language 1;Book Section;Group 1, Term 1.5, Group 2, Term 2.1, Detail 2.c;DUMMY015;INBOOK
+Author 14, N.;1990;Sample title 56: a dummy record for testing;;;;Publisher 2;Place 8;;;;;;Language 3;Book;Group 1, Term 1.1, Group 2, Term 2.3, Term 2.1;DUMMY056;BOOK
+Author 15, O.;1993;Sample title 52: a dummy record for testing;;;;Publisher 5;Place 1;;;;;;Language 2;Thesis;Group 1, Term 1.2, Group 2, Term 2.1, Term 2.2, Detail 2.a;DUMMY052;PHDTHESIS
+Author 16, P.;1975;Sample title 29: a dummy record for testing;;;;Publisher 6;Place 6;;;;;;Language 2;Book;Group 1, Term 1.4;DUMMY029;BOOK
+Author 16, P.;1988;Sample title 47: a dummy record for testing;Journal E;;;;;;14;1;279-316;;Language 2;Journal Article;Group 1, Term 1.2;DUMMY047;ARTICLE
+Author 16, P.;1994;Sample title 41: a dummy record for testing;;;;Publisher 3;Place 1;Series X;;;;;Language 4;Thesis;Group 1, Term 1.1, Group 2, Term 2.3, Term 2.2;DUMMY041;PHDTHESIS
+Author 16, P.;2020;Sample title 16: a dummy record for testing;Journal C;;;;;;42;1;395-407;;Language 4;Journal Article;Group 1, Term 1.1, Group 2, Term 2.2, Group 3, Section 3.A, Term 3.A.3, Term 3.A.2;DUMMY016;ARTICLE
+Author 17, Q.;1964;Sample title 48: a dummy record for testing;;Sample volume 9;Author 22, V.;Publisher 4;Place 7;;;;83-98;;Language 5;Book Section;Group 1, Term 1.3, Group 2, Term 2.3, Term 2.2, Group 3, Section 3.A, Term 3.A.1, Term 3.A.2, Section 3.B, Term 3.B.2, Detail 3.B.b;DUMMY048;INBOOK
+Author 18, R.;1597;Sample title 02: a dummy record for testing;;Sample volume 6;Author 09, I.;Publisher 6;Place 2;;;;321-332;;Language 2;Book Section;Group 1, Term 1.2, Group 2, Term 2.1, Detail 2.b, Detail 2.d;DUMMY002;INBOOK
+Author 18, R.;1694;Sample title 03: a dummy record for testing;;;;Publisher 2;Place 5;;;;;;Language 1;Thesis;Group 1, Term 1.3, Group 2, Term 2.2, Detail 2.c, Detail 2.b, Group 3, Section 3.B, Term 3.B.1;DUMMY003;PHDTHESIS
+Author 18, R.;1976;Sample title 49: a dummy record for testing;;;;Publisher 6;Place 1;;;;;;Language 4;Book;Group 1, Term 1.4, Group 3, Section 3.A, Term 3.A.3, Term 3.A.2;DUMMY049;BOOK
+Author 18, R.;2002;Sample title 20: a dummy record for testing;;;;Publisher 6;Place 7;;;;;;Language 2;Book;Group 1, Term 1.5, Group 3, Section 3.B, Term 3.B.1;DUMMY020;BOOK
+Author 20, T.;1954;Sample title 45: a dummy record for testing;Journal A;;;;;;10;3;316-337;;Language 4;Journal Article;Group 1, Term 1.5;DUMMY045;ARTICLE
+Author 20, T.;1989;Sample title 35: a dummy record for testing;Journal B;;;;;;38;1;13-25;;Language 4;Journal Article;Group 1, Term 1.5;DUMMY035;ARTICLE
+Author 20, T.;2012;Sample title 28: a dummy record for testing;;;;Publisher 3;Place 8;Series Y;;;;;Language 3;Book;Group 1, Term 1.3, Group 3, Section 3.A, Term 3.A.1;DUMMY028;BOOK
+Author 21, U.;1967;Sample title 38: a dummy record for testing;Journal C;;;;;;32;2;136-159;;Language 4;Journal Article;Group 1, Term 1.3, Group 2, Term 2.1, Term 2.3, Detail 2.b;DUMMY038;ARTICLE
+Author 22, V.;1953;Sample title 60: a dummy record for testing;;Sample volume 2;Author 11, K.;Publisher 4;Place 1;;;;238-254;;Language 3;Book Section;Group 1, Term 1.5, Group 3, Section 3.A, Term 3.A.1;DUMMY060;INBOOK
+Author 22, V.;2023;Sample title 50: a dummy record for testing;;;;Publisher 6;Place 5;;;;;;Language 2;Source Edition;Group 1, Term 1.5, Group 3, Section 3.A, Term 3.A.1, Term 3.A.2;DUMMY050;BOOK
+Author 23, W.;1965;Sample title 44: a dummy record for testing;Journal A;;;;;;22;4;25-51;;Language 4;Journal Article;Group 1, Term 1.4, Group 2, Term 2.3, Group 3, Section 3.A, Term 3.A.2, Term 3.A.3, Section 3.B, Term 3.B.2;DUMMY044;ARTICLE
+Author 23, W.;2013;Sample title 46: a dummy record for testing;;;;Publisher 2;Place 1;;;;;;Language 4;Book;Group 1, Term 1.1, Group 2, Term 2.1, Term 2.2, Group 3, Section 3.A, Term 3.A.3, Section 3.B, Term 3.B.2;DUMMY046;BOOK
+Author 24, X.;1957;Sample title 22: a dummy record for testing;Journal D;;;;;;5;1;317-350;;Language 1;Journal Article;Group 1, Term 1.2, Group 3, Section 3.B, Term 3.B.1;DUMMY022;ARTICLE
+Author 25, Y.;1873;Sample title 11: a dummy record for testing;;;;Publisher 6;Place 5;;;;;;Language 4;Book;Group 1, Term 1.1, Group 2, Term 2.1, Term 2.2, Detail 2.d, Group 3, Section 3.A, Term 3.A.3, Term 3.A.2;DUMMY011;BOOK
+Author 25, Y.;1954;Sample title 59: a dummy record for testing;;Sample volume 6;Author 08, H.;Publisher 3;Place 2;Series Y;;;366-384;;Language 4;Book Section;Group 1, Term 1.4;DUMMY059;INBOOK
+Author 26, Z.;1653;Sample title 01: a dummy record for testing;;;;Publisher 2;Place 8;;;;;;Language 1;Book;Group 1, Term 1.1, Group 2, Term 2.3, Detail 2.b, Detail 2.c, Group 3, Section 3.A, Term 3.A.2, Term 3.A.1;DUMMY001;BOOK
+Author 26, Z.;1975;Sample title 34: a dummy record for testing;;Sample volume 5;Author 24, X.;Publisher 4;Place 5;;;;151-164;;Language 2;Book Section;Group 1, Term 1.4, Group 2, Term 2.2;DUMMY034;INBOOK
+Author 26, Z.;2016;Sample title 37: a dummy record for testing;Journal D;;;;;;42;1;328-365;;Language 1;Journal Article;Group 1, Term 1.2;DUMMY037;ARTICLE
+Author 26, Z.;2024;Sample title 24: a dummy record for testing;;;;Publisher 5;Place 4;;;;;;Language 5;Book;Group 1, Term 1.4, Group 2, Term 2.3, Term 2.2;DUMMY024;BOOK

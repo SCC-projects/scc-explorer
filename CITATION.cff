@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: >-
+  If you use this software, please cite it as below. To cite the research
+  content of the SCC Explorer platform, follow the citation guidance
+  published on the platform.
+type: software
+title: "SCC Explorer — applications"
+abstract: >-
+  Static, server-free web applications of the SCC Explorer platform on the
+  history of the Congregation of the Council (Sacra Congregatio Concilii):
+  a bibliographic catalogue with keyword search and charts, and a timeline
+  with Julian / Gregorian dating, a papal calendar and Easter dates.
+  Distributed with synthetic data.
+authors:
+  - family-names: Anokhina
+    given-names: Alexandra
+  - family-names: Albani
+    given-names: Benedetta
+    affiliation: Max Planck Institute for Legal History and Legal Theory
+repository-code: "https://github.com/SCC-projects/scc-explorer"
+url: "https://scc-projects.github.io/scc-explorer/"
+license: MIT
+version: 0.9.0
+date-released: "2026-10-04"
+keywords:
+  - digital humanities
+  - legal history
+  - Roman Curia
+  - Congregation of the Council
+  - bibliography
+  - timeline
+  - historical calendars

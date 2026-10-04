@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Build Graphs · SCC Explorer demo</title>
+
+<link rel="stylesheet" href="../assets/demo.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/datatables.net-dt@1.13.8/css/jquery.dataTables.min.css" integrity="sha384-tFA8ahuAUqwxpBviiAFdAJR7TTBoWYBDU8+gmiLX0sRQRDDcRk6jiP1lWss11gn/" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nouislider@15.7.1/dist/nouislider.min.css" integrity="sha384-PSZaVsyG9jDu8hFaSJev5s/9poIJlX7cuxSGdqCgXRHpo2DzIaZAyCd2rG/DJJmV" crossorigin="anonymous">
+<link rel="stylesheet" href="graph.css">
+</head>
+
+<body>
+<header class="demo-bar" style="--accent: var(--references)">
+  <a class="demo-brand" href="../index.html">SCC Explorer <span>demo</span></a>
+  <nav class="demo-nav">
+    <a href="search.html">Search References</a>
+    <a href="graph.html" aria-current="page">Build Graphs</a>
+    <a href="../timeline/index.html">Timeline</a>
+  </nav>
+</header>
+<div class="demo-notice"><strong>Demo build</strong>All records are synthetic.</div>
+
+<main class="demo-main">
+<div id="scc-graph">
+
+  <!-- ---------- sidebar ---------- -->
+  <div class="sidebar">
+
+    <h4>Select graph type</h4>
+    <select id="plotnumber" class="form-ctl">
+      <option value="Bubble" selected>Bubble</option>
+      <option value="Bar">Bar</option>
+      <option value="Pie">Pie</option>
+    </select>
+
+    <p class="hint">You can select an area on the graph manually and receive the results in the data table below.</p>
+    <p class="hint">Note that not all graphs support the data table; this function is available for bubbles and bars only.</p>
+
+    <h4>Filter by period of time</h4>
+    <div class="slider-wrap">
+      <div id="yearSlider"></div>
+      <div class="year-out" id="yearOut"></div>
+    </div>
+
+    <hr>
+
+    <h4>Filter by Keywords</h4>
+    <p class="hint"><span id="rowCount">0</span> records match the current filters.</p>
+    <div id="kwPanels"></div>
+
+    <hr>
+
+    <h4>Download Section</h4>
+    <button type="button" class="btn-dl" id="downloadPlot">Download Plot</button>
+    <hr>
+    <button type="button" class="btn-dl" id="Download">Download this table</button>
+  </div>
+
+  <!-- ---------- main panel ---------- -->
+  <div class="main">
+
+    <div class="axis-row">
+      <div>
+        <label for="selY">Y axis Category</label>
+        <select id="selY" class="form-ctl"></select>
+      </div>
+      <div>
+        <label for="selX">X axis Category</label>
+        <select id="selX" class="form-ctl"></select>
+      </div>
+      <div>
+        <label for="selZ">Type of Entity</label>
+        <select id="selZ" class="form-ctl"></select>
+      </div>
+    </div>
+
+    <div class="plot-box">
+      <canvas id="plotui"></canvas>
+    </div>
+    <p class="hint" id="legendNote"></p>
+    <p class="hint" id="pieNote" hidden>The pie chart summarises the Type of Entity column; area selection is not available for it.</p>
+
+    <div class="well-kw">
+      <h4>Points selected: <span id="selCount">0</span>
+        <button type="button" class="btn-clear" id="clearBrush">Clear selection</button>
+      </h4>
+      <table id="brushTable" class="display" style="width:100%">
+        <thead>
+          <tr>
+            <th>AUTHOR</th><th>YEAR</th><th>TITLE</th><th>PUBLISHER</th><th>TYPE</th>
+            <th>PLACE</th><th>KEYWORDS</th><th>LANGUAGE</th><th>TYPOLOGY_OF_PUBLICATION</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ---------- download modal ---------- -->
+  <div class="modal-back" id="dlModal" hidden>
+    <div class="modal-card">
+      <h4>Download Table</h4>
+      <button type="button" class="btn-dl" id="dl_csv">Download as csv</button>
+      <button type="button" class="btn-dl" id="dl_xls">Download as Excel table</button>
+      <button type="button" class="btn-dl" id="dl_bib">Download as Bibtex</button>
+      <br>
+      <button type="button" class="btn-clear" data-close>Close</button>
+    </div>
+  </div>
+
+</div>
+</main>
+
+<footer class="demo-footer">
+  SCC Explorer — open-source demo build with synthetic data.
+  <a href="../docs/references-explorer.md">Documentation</a>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js" integrity="sha384-1H217gwSVyLSIfaLxHbE7dRb3v4mYCKbpQvzx0cegeju1MVsGrX5xXxAvs/HgeFs" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/datatables.net@1.13.8/js/jquery.dataTables.min.js" integrity="sha384-EA0TH5FL18lz8e2FL4CeUXiVOMJ3ppD6fZo3QkEgERDV68Qa6ok9LFz0xQe2NLNv" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.js" integrity="sha384-dug+JxfBvklEQdJ4AYuBBAIScUz0bVN73xpy273gcAwHjb3qI0fXmuYNaNfdyYJG" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/nouislider@15.7.1/dist/nouislider.min.js" integrity="sha384-/gBUOLHADjY2rp6bHB0IyW9AC28q4OsnirJScje4l1crgYW7Qarx3dH8zcqcUgmy" crossorigin="anonymous"></script>
+
+<script src="data/references.js"></script>
+<script src="keywords.js"></script>
+<script src="graph.js"></script>
+</body>
+</html>

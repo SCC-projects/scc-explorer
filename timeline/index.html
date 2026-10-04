@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Timeline · SCC Explorer demo</title>
+
+<link rel="stylesheet" href="../assets/demo.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vis-timeline@7.7.3/styles/vis-timeline-graph2d.min.css" integrity="sha384-N/4l0y8PNlO5uZuzP9PK3bAgJQ8ZChybZFXB2mpkZRUil/bui++mvYXPzPAHpbr6" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nouislider@15.7.1/dist/nouislider.min.css" integrity="sha384-PSZaVsyG9jDu8hFaSJev5s/9poIJlX7cuxSGdqCgXRHpo2DzIaZAyCd2rG/DJJmV" crossorigin="anonymous">
+<link rel="stylesheet" href="timeline.css">
+</head>
+
+<body>
+<header class="demo-bar" style="--accent: var(--timeline)">
+  <a class="demo-brand" href="../index.html">SCC Explorer <span>demo</span></a>
+  <nav class="demo-nav">
+    <a href="../references/search.html">Search References</a>
+    <a href="../references/graph.html">Build Graphs</a>
+    <a href="index.html" aria-current="page">Timeline</a>
+  </nav>
+</header>
+<div class="demo-notice"><strong>Demo build</strong>All entities and dates are synthetic.</div>
+
+<main class="demo-main">
+<div id="tl-app">
+  <div id="app">
+
+    <aside id="sidebar">
+      <h3 class="sidebar-title">Controllers</h3>
+
+      <section class="tl-panel">
+        <input id="global-search" type="search" class="entity-select"
+               placeholder="Search by name…" autocomplete="off" aria-label="Search by name">
+        <div id="entity-search-wrap"></div>
+        <button id="btn-fit" class="btn-action" type="button">Fit all items</button>
+      </section>
+
+      <section class="tl-panel">
+        <h4>Time reckoning</h4>
+        <label class="switch-row" for="historic-toggle">
+          <input type="checkbox" id="historic-toggle">
+          <span class="switch" aria-hidden="true"></span>
+          <span class="switch-label">Julian / Gregorian calendar</span>
+        </label>
+        <label class="switch-row" for="papal-toggle">
+          <input type="checkbox" id="papal-toggle">
+          <span class="switch" aria-hidden="true"></span>
+          <span class="switch-label">Papal calendar</span>
+        </label>
+        <label class="switch-row" for="easter-toggle">
+          <input type="checkbox" id="easter-toggle">
+          <span class="switch" aria-hidden="true"></span>
+          <span class="switch-label">Easter dates</span>
+        </label>
+        <p class="hint">The data cross the Gregorian reform of October 1582: Meeting 3
+          and Meeting 4 fall on consecutive days. Compare their cards with the first
+          switch on and off.</p>
+      </section>
+
+      <section class="tl-panel">
+        <h4>Show on the timeline</h4>
+        <button class="btn-filter" type="button" data-group="Pontificates" data-color="reign">Pontificates</button>
+        <button class="btn-filter" type="button" data-group="Persons" data-color="person">Persons</button>
+        <button class="btn-filter" type="button" data-group="Meetings" data-color="meeting">Meetings</button>
+
+        <div class="tl-collapse">
+          <div class="tl-collapse-head head-groups" data-head="groups">Groups</div>
+          <div class="tl-collapse-body" data-body="groups">
+            <button class="btn-mini" type="button" data-selectall="groups">(Un)select all</button>
+            <div class="check-list" id="list-groups"></div>
+          </div>
+          <div class="tl-collapse-head head-institutions" data-head="institutions">Institutions</div>
+          <div class="tl-collapse-body" data-body="institutions">
+            <button class="btn-mini" type="button" data-selectall="institutions">(Un)select all</button>
+            <div class="check-list" id="list-institutions"></div>
+          </div>
+        </div>
+      </section>
+    </aside>
+
+    <section id="main">
+      <div class="slider-wrap">
+        <h4>Period</h4>
+        <div id="year-slider"></div>
+        <div class="slider-readout"><span id="year-min"></span><span id="year-max"></span></div>
+      </div>
+      <div id="timeline"></div>
+      <div class="zoom-wrap">
+        <span class="zoom-label">−</span>
+        <input id="zoom-slider" type="range" min="0" max="100" value="0" aria-label="Zoom">
+        <span class="zoom-label">+</span>
+      </div>
+      <div id="details" class="well-panel">
+        <p class="muted">Select an item on the timeline to see its details.</p>
+      </div>
+    </section>
+
+  </div>
+  <div id="loading">Loading data…</div>
+</div>
+</main>
+
+<footer class="demo-footer">
+  SCC Explorer — open-source demo build with synthetic data.
+  <a href="../docs/timeline-explorer.md">Documentation</a>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/vis-timeline@7.7.3/standalone/umd/vis-timeline-graph2d.min.js" integrity="sha384-MLX+7yEEPNEznaIWwQi2pBMODSBP6Qo6BOVpzjFWB0UkfEzEYsvHOo7ISLfcQeiI" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/nouislider@15.7.1/dist/nouislider.min.js" integrity="sha384-/gBUOLHADjY2rp6bHB0IyW9AC28q4OsnirJScje4l1crgYW7Qarx3dH8zcqcUgmy" crossorigin="anonymous"></script>
+
+<script src="data/timeline.js"></script>
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

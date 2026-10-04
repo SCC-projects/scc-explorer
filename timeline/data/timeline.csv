@@ -1,0 +1,38 @@
+content;group;subgroup;type;className;start;end;name;info;bib;date_of_birth;date_of_death;place;location;chair;secretary;members;source_transcription;archival_reference;notes;record_id
+Pontificate 1;Pontificates;A;range;reign;11-02-1550;20-03-1555;Personal name of Pontificate 1;;Sample bibliography entry for the reference chronology.;1490;20-03-1555;;;;;;;;;REIGN-01
+Sede vacante;Pontificates;A;range;reign_vacancy;20-03-1555;06-04-1555;;;;;;;;;;;;;;
+Pontificate 2;Pontificates;A;range;reign;06-04-1555;15-08-1559;Personal name of Pontificate 2;;Sample bibliography entry for the reference chronology.;1495;15-08-1559;;;;;;;;;REIGN-02
+Sede vacante;Pontificates;A;range;reign_vacancy;15-08-1559;22-12-1559;;;;;;;;;;;;;;
+Pontificate 3;Pontificates;A;range;reign;22-12-1559;06-12-1565;Personal name of Pontificate 3;;Sample bibliography entry for the reference chronology.;1499;06-12-1565;;;;;;;;;REIGN-03
+Sede vacante;Pontificates;A;range;reign_vacancy;06-12-1565;04-01-1566;;;;;;;;;;;;;;
+Pontificate 4;Pontificates;A;range;reign;04-01-1566;28-04-1572;Personal name of Pontificate 4;;Sample bibliography entry for the reference chronology.;1506;28-04-1572;;;;;;;;;REIGN-04
+Sede vacante;Pontificates;A;range;reign_vacancy;28-04-1572;10-05-1572;;;;;;;;;;;;;;
+Pontificate 5;Pontificates;A;range;reign;10-05-1572;07-04-1585;Personal name of Pontificate 5;;Sample bibliography entry for the reference chronology.;1512;07-04-1585;;;;;;;;;REIGN-05
+Sede vacante;Pontificates;A;range;reign_vacancy;07-04-1585;21-04-1585;;;;;;;;;;;;;;
+Pontificate 6;Pontificates;A;range;reign;21-04-1585;24-08-1590;Personal name of Pontificate 6;;Sample bibliography entry for the reference chronology.;1525;24-08-1590;;;;;;;;;REIGN-06
+Sede vacante;Pontificates;A;range;reign_vacancy;24-08-1590;02-02-1592;;;;;;;;;;;;;;
+Pontificate 7;Pontificates;A;range;reign;02-02-1592;01-03-1605;Personal name of Pontificate 7;;Sample bibliography entry for the reference chronology.;1532;01-03-1605;;;;;;;;;REIGN-07
+Sede vacante;Pontificates;A;range;reign_vacancy;01-03-1605;14-05-1605;;;;;;;;;;;;;;
+Pontificate 8;Pontificates;A;range;reign;14-05-1605;26-01-1621;Personal name of Pontificate 8;;Sample bibliography entry for the reference chronology.;1545;26-01-1621;;;;;;;;;REIGN-08
+Person A;Persons;A;range;person;03-03-1556;17-07-1571;Person A, full personal name;Person A held the office in this period.;Sample bibliography entry for a person.;;;;;;;;;;;
+Person B;Persons;A;range;person;17-07-1571;09-02-1589;Person B, full personal name;Person B held the office in this period.;Sample bibliography entry for a person.;;;;;;;;;;;
+Person C;Persons;A;range;person;09-02-1589;28-11-1604;Person C, full personal name;Person C held the office in this period.;Sample bibliography entry for a person.;;;;;;;;;;;
+Person D;Persons;A;range;person;28-11-1604;30-06-1619;Person D, full personal name;Person D held the office in this period.;Sample bibliography entry for a person.;;;;;;;;;;;
+Person A;Group_1;A;range;member;01-06-1557;01-06-1575;Person A, full personal name;Person A was a member of Group 1.;;;;;;;;;;;;
+Person E;Group_1;B;range;member;01-06-1560;01-06-1584;Person E, full personal name;Person E was a member of Group 1.;;;;;;;;;;;;
+Person F;Group_2;A;range;member;01-06-1572;01-06-1598;Person F, full personal name;Person F was a member of Group 2.;;;;;;;;;;;;
+Person G;Group_2;B;range;member;01-06-1580;01-06-1601;Person G, full personal name;Person G was a member of Group 2.;;;;;;;;;;;;
+Person H;Group_3;A;range;member;01-06-1594;01-06-1614;Person H, full personal name;Person H was a member of Group 3.;;;;;;;;;;;;
+Person I;Group_3;B;range;member;01-06-1600;01-06-1620;Person I, full personal name;Person I was a member of Group 3.;;;;;;;;;;;;
+Meeting 1;Meetings;A;point;meeting;07-05-1562;07-05-1562;;;;;;Place 1;Building 2;Person A;Person E;Person E, Person X;Sample transcription of the record of Meeting 1.;Archive, Fonds 1, vol. 1, f. 10r;Names of participants found on the timeline are links to them.;MEET-001
+Meeting 2;Meetings;A;point;meeting;21-09-1574;21-09-1574;;;;;;Place 1;Building 1;Person B;Person A;Person A, Person F;Sample transcription of the record of Meeting 2.;Archive, Fonds 1, vol. 2, f. 20r;Names of participants found on the timeline are links to them.;MEET-002
+Meeting 3;Meetings;A;point;meeting;04-10-1582;04-10-1582;;;;;;Place 1;Building 2;Person B;Person F;Person F, Person G;Sample transcription of the record of Meeting 3.;Archive, Fonds 1, vol. 3, f. 30r;Names of participants found on the timeline are links to them.;MEET-003
+Meeting 4;Meetings;A;point;meeting;15-10-1582;15-10-1582;;;;;;Place 1;Building 1;Person B;Person F;Person E, Person G;Sample transcription of the record of Meeting 4.;Archive, Fonds 1, vol. 4, f. 40r;Names of participants found on the timeline are links to them.;MEET-004
+Meeting 5;Meetings;A;point;meeting;11-04-1597;11-04-1597;;;;;;Place 1;Building 2;Person C;Person H;Person G, Person H;Sample transcription of the record of Meeting 5.;Archive, Fonds 1, vol. 5, f. 50r;Names of participants found on the timeline are links to them.;MEET-005
+Meeting 6;Meetings;A;point;meeting;29-08-1610;29-08-1610;;;;;;Place 1;Building 1;Person D;Person I;Person H, Person I;Sample transcription of the record of Meeting 6.;Archive, Fonds 1, vol. 6, f. 60r;Names of participants found on the timeline are links to them.;MEET-006
+Institution 1;Institution_1;A;range;institution;01-01-1550;31-12-1620;;Lifespan of Institution 1.;;;;;;;;;;;;
+Foundation of Institution 1;Institution_1;A;point;institution_point;12-03-1552;12-03-1552;;Description of the foundation of institution 1.;;;;;;;;;;;;
+Reform of Institution 1;Institution_1;A;point;institution_point;08-08-1588;08-08-1588;;Description of the reform of institution 1.;;;;;;;;;;;;
+Institution 2;Institution_2;A;range;institution;15-07-1567;31-12-1620;;Lifespan of Institution 2.;;;;;;;;;;;;
+Foundation of Institution 2;Institution_2;A;point;institution_point;15-07-1567;15-07-1567;;Description of the foundation of institution 2.;;;;;;;;;;;;
+Reform of Institution 2;Institution_2;A;point;institution_point;02-02-1603;02-02-1603;;Description of the reform of institution 2.;;;;;;;;;;;;

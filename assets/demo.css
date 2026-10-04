@@ -1,0 +1,66 @@
+/* Page shell for the standalone demo pages: top bar, notice, footer.
+   The applications themselves carry their own scoped stylesheets and do
+   not depend on this file — on the production site the same apps sit
+   inside the platform's own navbar and footer instead. */
+
+:root {
+  --platform: rgba(44, 106, 102, 1);   /* SCC Explorer platform */
+  --references: rgba(191, 144, 0, 1);  /* References Explorer   */
+  --timeline: #9a0000;                 /* Timeline Explorer     */
+  --ink: #2a2a2a;
+  --muted: #6b705c;
+}
+
+* { box-sizing: border-box; }
+
+html, body { margin: 0; }
+body {
+  font-family: Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: var(--ink);
+  background: #fff;
+}
+
+.demo-bar {
+  display: flex; align-items: center; gap: 28px;
+  padding: 12px 24px;
+  background: var(--accent, var(--platform));
+  color: #fff;
+}
+.demo-brand {
+  color: #fff; text-decoration: none;
+  font-size: 19px; font-weight: 600; letter-spacing: .01em;
+  white-space: nowrap;
+}
+.demo-brand span { font-weight: 400; opacity: .8; }
+.demo-nav { display: flex; flex-wrap: wrap; gap: 4px 20px; }
+.demo-nav a { color: #fff; text-decoration: none; opacity: .85; font-size: 15px; }
+.demo-nav a:hover { opacity: 1; text-decoration: underline; }
+.demo-nav a[aria-current="page"] { opacity: 1; font-weight: 600; }
+
+.demo-notice {
+  position: fixed; bottom: 14px; right: 14px; z-index: 1040;
+  max-width: 230px;
+  padding: 9px 13px;
+  background: rgba(30, 30, 30, .88);
+  color: #fff;
+  border-radius: 3px;
+  font-size: 12px; line-height: 1.45;
+  pointer-events: none;
+}
+.demo-notice strong { display: block; font-weight: 600; }
+
+.demo-main { padding: 20px 24px 40px; }
+.demo-main > h1 { margin: 4px 0 16px; font-size: 26px; font-weight: 500; }
+
+.demo-footer {
+  padding: 18px 24px;
+  border-top: 1px solid #e3e3e3;
+  color: var(--muted);
+  font-size: 13px;
+}
+.demo-footer a { color: inherit; }
+
+@media (max-width: 760px) {
+  .demo-bar { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .demo-notice { position: static; max-width: none; margin: 8px 24px 0; }
+}
