@@ -6,8 +6,11 @@
 <title>SCC Explorer · open-source demo</title>
 <link rel="stylesheet" href="assets/demo.css">
 <style>
-  .intro { max-width: 760px; margin: 8px 0 28px; line-height: 1.55; color: #3e3f3a; }
-  .apps { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; max-width: 1100px; }
+  /* one centred column; the card contents stay left-aligned for readability */
+  .home { max-width: 1100px; margin: 0 auto; }
+  .home > h1 { text-align: center; }
+  .intro { max-width: 760px; margin: 8px auto 16px; line-height: 1.55; color: #3e3f3a; text-align: center; }
+  .apps { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; margin-top: 28px; }
   .app {
     display: flex; flex-direction: column;
     border: 1px solid #dfd7ca; border-radius: 6px; overflow: hidden;
@@ -17,8 +20,8 @@
   .app-head { padding: 14px 18px; color: #fff; font-size: 18px; font-weight: 600; }
   .app-body { padding: 14px 18px 18px; font-size: 14px; line-height: 1.5; }
   .app-body ul { margin: 8px 0 0; padding-left: 18px; }
-  .links { margin-top: 30px; font-size: 14px; }
-  .links a { color: var(--platform); }
+  .links { margin-top: 30px; font-size: 14px; text-align: center; }
+  .links a, .intro a { color: var(--platform); }
 </style>
 </head>
 
